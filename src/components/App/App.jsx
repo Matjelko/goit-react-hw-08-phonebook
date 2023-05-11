@@ -9,29 +9,42 @@ import ContactList from "../ContactList/ContactList";
 
 import PropTypes from "prop-types";
 import '../../index.css';
+import { Routes, Route } from "react-router-dom";
+import { HomePage } from "pages/HomePage";
+import { LoginPage } from "pages/LoginPage";
+import { RegisterPage } from "pages/RegisterPage";
+import { ContactsPage } from "pages/ContactsPage";
 
 const App = () => {
-  const dispatch = useDispatch()
-  const isLoading = useSelector(getIsLoading);
-  const error = useSelector(getError);
-
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
-
   return(
-    <div className="container">
-      <h1 className="header--phonebook">Phonebook</h1>
-      <ContactForm/>
-    
-      <h2 className="header-contacts">Contacts</h2>
-      <Filter/>
-      {isLoading && !error 
-        ? <h4>Request in progress...</h4>
-        : <ContactList/>
-      }
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="login" element={<LoginPage />} />
+      <Route path="register" element={<RegisterPage />} />
+      <Route path="contacts" element={<ContactsPage />} />
+    </Routes>
   )
+  // const dispatch = useDispatch()
+  // const isLoading = useSelector(getIsLoading);
+  // const error = useSelector(getError);
+
+  // useEffect(() => {
+  //   dispatch(fetchContacts());
+  // }, [dispatch]);
+
+  // return(
+  //   <div className="container">
+  //     <h1 className="header--phonebook">Phonebook</h1>
+  //     <ContactForm/>
+    
+  //     <h2 className="header-contacts">Contacts</h2>
+  //     <Filter/>
+  //     {isLoading && !error 
+  //       ? <h4>Request in progress...</h4>
+  //       : <ContactList/>
+  //     }
+  //   </div>
+  // )
 }
 
 App.propTypes = {
