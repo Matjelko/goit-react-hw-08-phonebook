@@ -16,15 +16,19 @@ import { RegisterPage } from "pages/RegisterPage";
 import { ContactsPage } from "pages/ContactsPage";
 import { Layout } from "components/Layout/Layout";
 import { refreshUser } from "redux/auth/operations";
+import { useAuth } from "hooks/useAuth";
 
 const App = () => {
   const dispatch = useDispatch();
+  const { isRefreshing } = useAuth();
 
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch])
 
-  return(
+  return isRefreshing ? (
+    <b>Refreshing user...</b>
+    ) : (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
