@@ -4,6 +4,7 @@ import { deleteContact } from 'redux/operations';
 
 import PropTypes from 'prop-types';
 import './ContactList.css'
+import { Button, ListItemButton, Typography } from '@mui/material';
 
 const ContactList = () => {
     const contacts = useSelector(getContacts);
@@ -21,10 +22,12 @@ const ContactList = () => {
             {showContacts.map(contact => {
                 return(
                     <li key={contact.id} className='contactList__unordered-list--item'>
-                        {contact.name} : {contact.number}
-                        <button className='contactList__unordered-list--button' type='button' id={contact.id} onClick={() => handleDelete(contact.id)}>
-                            Delete
-                        </button>
+                        <Typography>{contact.name} : {contact.number}</Typography>
+                        <div className='contactList__unordered-list--button'>
+                            <Button variant='outlined' size='small' type='button' id={contact.id} onClick={() => handleDelete(contact.id)}>
+                                Delete
+                            </Button>
+                        </div>
                     </li>
                 )
             })}

@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material"
 import ContactForm from "components/ContactForm/ContactForm"
 import ContactList from "components/ContactList/ContactList"
 import Filter from "components/Filter/Filter"
@@ -17,15 +18,16 @@ export const ContactsPage = () => {
     
     return(
         <div className="container">
-        <h1 className="header--phonebook">Phonebook</h1>
-        <ContactForm/>
-        
-        <h2 className="header-contacts">Contacts</h2>
-        <Filter/>
-        {isLoading && !error 
-            ? <h4>Request in progress...</h4>
-            : <ContactList/>
-        }
+            <span className="header-contacts__phonebook"><Typography component="h1" variant="h4">Phonebook</Typography></span>
+            <ContactForm/>
+            
+            <span className="header-contacts__contacts"><Typography component="h1" variant="h4" className="header-contacts">Contacts</Typography></span>
+            {/* <h2 className="header-contacts">Contacts</h2> */}
+            <Filter/>
+            {isLoading && !error 
+                ? <h4>Request in progress...</h4>
+                : <ContactList/>
+            }
         </div>
     )
 }

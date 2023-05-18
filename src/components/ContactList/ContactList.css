@@ -1,21 +1,23 @@
 .contactList__unordered-list{
-    margin-right: 57px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    list-style-type: none;
 }
 
 .contactList__unordered-list--item{
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
 }
 
 .contactList__unordered-list--button{
     margin-left: 15px;
     background-color: transparent;
-    border: 1px;
+    border: 0px;
     border-style: solid;
     border-color: gray;
     border-radius: 50px;
-}
-
-.contactList__unordered-list--button:hover{
-    background-color: aquamarine;
-    cursor: pointer;
 }

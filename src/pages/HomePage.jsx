@@ -1,7 +1,10 @@
+import { Typography } from '@mui/material'
+import '../index.css'
+
 export const HomePage = () => {
     return(
-        <div>
-            This is HomePage!
+        <div className='container'>
+            <Typography component="h1" variant="h4">This is HomePage!</Typography>
         </div>
     // <div className="container">
     //     <h1 className="header--phonebook">Phonebook</h1>

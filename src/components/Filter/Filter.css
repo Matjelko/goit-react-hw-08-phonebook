@@ -1,13 +1,14 @@
 .filter__section{
-    margin-right: 178px;
+    margin-top: 7px;
+    margin-right: 109px;
 }
 
 .filter__paragraph{
-    margin: 0px;
+    margin-left: 0px;
     padding: 0px;
     margin-bottom: 10px;
 }
 
 .filter__input{
-    width: 120px;
+    /* width: 120px; */
 }
