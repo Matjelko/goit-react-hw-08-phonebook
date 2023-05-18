@@ -8,9 +8,11 @@ export const StyledNavigation = styled.nav`
     a {
         color: #111;
         text-decoration: none;
+        font-size: 20px;
 
         &:hover {
-        text-decoration: underline;
+            color: #87CEEB;
+            transition: 500ms;
         }
     }
     .active {

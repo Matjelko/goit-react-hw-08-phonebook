@@ -19,6 +19,7 @@ import { refreshUser } from "redux/auth/operations";
 import { useAuth } from "hooks/useAuth";
 import { RestrictedRoute } from "components/RestrictedRoute/RestrictedRoute";
 import { PrivateRoute } from "components/PrivateRoute/PrivateRoute";
+import CircularIndeterminate from "components/Loader/Loader";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -29,7 +30,7 @@ const App = () => {
   }, [dispatch])
 
   return isRefreshing ? (
-    <b>Refreshing user...</b>
+    <CircularIndeterminate/>
     ) : (
     <Routes>
       <Route path="/" element={<Layout />}>
