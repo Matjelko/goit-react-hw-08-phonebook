@@ -24,6 +24,15 @@ code {
   margin-top: 30px;
 }
 
+.container__loader{
+  width: 310px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
 .header--phonebook{
   margin-right: 155px
 }

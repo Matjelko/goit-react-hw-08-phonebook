@@ -19,7 +19,7 @@ import { refreshUser } from "redux/auth/operations";
 import { useAuth } from "hooks/useAuth";
 import { RestrictedRoute } from "components/RestrictedRoute/RestrictedRoute";
 import { PrivateRoute } from "components/PrivateRoute/PrivateRoute";
-import CircularIndeterminate from "components/Loader/Loader";
+import CircularIndeterminate from "components/Loader/CircleLoader/CircleLoader";
 
 const App = () => {
   const dispatch = useDispatch();
