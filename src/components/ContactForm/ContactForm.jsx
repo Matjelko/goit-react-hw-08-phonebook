@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
+import { getContacts } from "redux/selectors";
 import { addContact } from "redux/operations";
+
+import { Button, TextField, Typography } from "@mui/material";
 
 import PropTypes from 'prop-types';
 import './ContactForm.css'
-import { getContacts } from "redux/selectors";
 
 const ContactForm = () => {
     const [ name, setName ] = useState('')
@@ -39,9 +42,9 @@ const ContactForm = () => {
 
     return(
         <form onSubmit={handleSubmit}>
-            <p className="contactForm__paragraph">Name</p>
-            <input
-                className = "contactForm__input"
+            <Typography>Name</Typography>
+            <TextField
+                size="small"
                 id="name"
                 type="text"
                 name="name"
@@ -51,9 +54,9 @@ const ContactForm = () => {
                 value={name}
                 onChange={evt => setName(evt.target.value)}
             />
-            <p className="contactForm__paragraph--number">Number</p>
-            <input
-                className = "contactForm__input"
+            <span className="contactForm_margin"><Typography>Number</Typography></span>
+            <TextField
+                size="small"
                 id="number"
                 type="tel"
                 name="number"
@@ -63,7 +66,9 @@ const ContactForm = () => {
                 value={number}
                 onChange={evt => setNumber(evt.target.value)}
             />
-            <button className="contactForm__button" type="submit">Add Contact</button>
+            <div className="contactForm__button--center">
+                <Button variant="contained" type="submit" className="contactForm__button">Add Contact</Button>
+            </div>
         </form>
     )
 }

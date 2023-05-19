@@ -1,6 +1,8 @@
 import { useDispatch } from 'react-redux';
 import { setFilter } from 'redux/filterSlice';
 
+import { TextField, Typography } from '@mui/material';
+
 import PropTypes from 'prop-types';
 import './Filter.css'
 
@@ -15,10 +17,10 @@ const Filter = () => {
 
     return (
         <div className="filter__section">
-            <p className="filter__paragraph">Find contacts by name</p>
-            <input
+            <Typography className="filter__paragraph">Find contacts by name</Typography>
+            <TextField
+                size='small'
                 id="filter-input"
-                className="filter__input"
                 type="text"
                 name="name"
                 title="title"

@@ -2,10 +2,14 @@ form{
     width: 300px;
     display: flex;
     flex-direction: column;
-    /* margin-right: 18px; */
+    margin-top: 10px;
     border-width: 1px;
     border-style: solid;
     padding: 10px;
+}
+
+.contactForm_margin{
+    margin-top: 15px;
 }
 
 .contactForm__paragraph{
@@ -26,17 +30,17 @@ form{
 }
 
 .contactForm__button{
-    margin-top: 20px;
-    font-size: 10px;
-    width: 75px;
-    background-color: transparent;
+    font-size: 13px;
+    width: 200px;
     border: 1px;
     border-style: solid;
     border-color: gray;
-    border-radius: 50px;
 }
 
-.contactForm__button:hover{
-    background-color: aquamarine;
-    cursor: pointer;
+.contactForm__button--center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
