@@ -9,9 +9,11 @@ import App from './components/App/App';
 
 import './index.css';
 
+const baseRoute = '/goit-react-hw-08-phonebook'
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={baseRoute}>
       <PersistGate loading={null} persistor={persistor}>
         <Provider store={store}>
           <App/>
