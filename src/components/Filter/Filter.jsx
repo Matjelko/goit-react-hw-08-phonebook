@@ -1,9 +1,10 @@
 import { useDispatch } from 'react-redux';
 import { setFilter } from 'redux/filterSlice';
 
+import { TextField, Typography } from '@mui/material';
+
 import PropTypes from 'prop-types';
 import './Filter.css'
-import { TextField, Typography } from '@mui/material';
 
 const Filter = () => {
     const dispatch = useDispatch();
@@ -20,7 +21,6 @@ const Filter = () => {
             <TextField
                 size='small'
                 id="filter-input"
-                className="filter__input"
                 type="text"
                 name="name"
                 title="title"

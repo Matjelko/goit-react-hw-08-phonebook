@@ -39,16 +39,5 @@ export const LoginForm = () => {
                 Log In
             </Button>
         </StyledForm>
-        // <form onSubmit={handleSubmit} autoComplete="off">
-        //     <label>
-        //         Email
-        //         <input type="email" name="email" />
-        //     </label>
-        //     <label>
-        //         Password
-        //         <input type="password" name="password" />
-        //     </label>
-        //     <Button variant='contained' type="submit">Log In</Button>
-        // </form>
     );
 };

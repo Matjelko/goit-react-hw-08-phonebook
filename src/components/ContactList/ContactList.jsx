@@ -2,9 +2,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getContacts, getFilter } from 'redux/selectors';
 import { deleteContact } from 'redux/operations';
 
+import { Button, Typography } from '@mui/material';
+
 import PropTypes from 'prop-types';
 import './ContactList.css'
-import { Button, ListItemButton, Typography } from '@mui/material';
 
 const ContactList = () => {
     const contacts = useSelector(getContacts);

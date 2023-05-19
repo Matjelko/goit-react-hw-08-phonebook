@@ -4,7 +4,6 @@ export const StyledAuthNav = styled.nav`
     display: flex;
     flex-direction: row;
     align-items: center;
-
     gap: 15px;
 
     a {
@@ -13,7 +12,6 @@ export const StyledAuthNav = styled.nav`
         font-size: 20px;
 
         &:hover {
-        /* text-decoration: underline; */
         color: #87CEEB;
         transition: 500ms;
         }

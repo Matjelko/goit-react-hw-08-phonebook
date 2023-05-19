@@ -1,7 +1,9 @@
 import { LoginForm } from "components/LoginForm/LoginForm"
-import '../index.css'
+
 import { Avatar, Typography } from "@mui/material"
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+
+import '../index.css'
 
 export const LoginPage = () => {
     return(

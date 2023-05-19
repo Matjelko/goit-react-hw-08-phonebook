@@ -67,7 +67,3 @@ export const refreshUser = createAsyncThunk(
         }
     }
  );
-
-// export const logOut;
-
-// bugifx

@@ -1,8 +1,9 @@
-import { AppContainer } from "components/AppContainer/AppContainer"
 import { Suspense } from "react"
 import { Outlet } from "react-router-dom"
 
-export const Layout = ({ children }) => {
+import { AppContainer } from "components/AppContainer/AppContainer"
+
+export const Layout = () => {
     return (
         <div>
             <AppContainer />

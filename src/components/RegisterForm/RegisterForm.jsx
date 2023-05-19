@@ -1,6 +1,8 @@
-import { Button, TextField } from '@mui/material';
 import { useDispatch } from 'react-redux';
+
 import { register } from 'redux/auth/operations';
+
+import { Button, TextField } from '@mui/material';
 import { StyledForm } from './RegisterForm.styled';
 
 export const RegisterForm = () => {

@@ -1,7 +1,9 @@
 import { RegisterForm } from "components/RegisterForm/RegisterForm"
-import '../index.css'
+
 import { Avatar, Typography } from "@mui/material"
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+
+import '../index.css'
 
 export const RegisterPage = () => {
     return(

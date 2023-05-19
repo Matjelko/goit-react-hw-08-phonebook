@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
+import { getContacts } from "redux/selectors";
 import { addContact } from "redux/operations";
+
+import { Button, TextField, Typography } from "@mui/material";
 
 import PropTypes from 'prop-types';
 import './ContactForm.css'
-import { getContacts } from "redux/selectors";
-import { Alert, Button, TextField, Typography } from "@mui/material";
 
 const ContactForm = () => {
     const [ name, setName ] = useState('')
@@ -67,7 +69,6 @@ const ContactForm = () => {
             <div className="contactForm__button--center">
                 <Button variant="contained" type="submit" className="contactForm__button">Add Contact</Button>
             </div>
-            {/* <button className="contactForm__button" type="submit">Add Contact</button> */}
         </form>
     )
 }

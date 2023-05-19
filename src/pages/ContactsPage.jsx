@@ -1,12 +1,15 @@
-import { Typography } from "@mui/material"
+import { useEffect } from "react"
+import { useDispatch, useSelector } from "react-redux"
+
+import { fetchContacts } from "redux/operations"
+import { getError, getIsLoading } from "redux/selectors"
+
 import ContactForm from "components/ContactForm/ContactForm"
 import ContactList from "components/ContactList/ContactList"
 import Filter from "components/Filter/Filter"
 import LinearIndeterminate from "components/Loader/CircleLoader/LinearLoader/LinearLoader"
-import { useEffect } from "react"
-import { useDispatch, useSelector } from "react-redux"
-import { fetchContacts } from "redux/operations"
-import { getError, getIsLoading } from "redux/selectors"
+
+import { Typography } from "@mui/material"
 
 export const ContactsPage = () => {
     const dispatch = useDispatch()
@@ -23,7 +26,6 @@ export const ContactsPage = () => {
             <ContactForm/>
             
             <span className="header-contacts__contacts"><Typography component="h1" variant="h4" className="header-contacts">Contacts</Typography></span>
-            {/* <h2 className="header-contacts">Contacts</h2> */}
             <Filter/>
             {isLoading && !error 
                 ? <div className="container__loader"><LinearIndeterminate/></div>
